@@ -31,6 +31,8 @@ bool duplicate(int numbers[], int length, int* duplication)
             }
 
             int tmp = numbers[i];
+            numbers[i] = numbers[tmp];
+            numbers[tmp] = tmp;
         }
     }
 }
