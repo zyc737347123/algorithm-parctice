@@ -42,7 +42,7 @@ bool duplicate(int numbers[], int length, int* duplication)
 }
 
 
-// 3.2 不可以更改数组, 示例代码有问题
+// 3.2 不可以更改数组, 示例代码有问题(没有看清楚题目，题目的条件变了，示例代码没有错，又犯低级错误了)
 int countRange(const int* numbers, int length, int start, int end)
 {
     if(numbers == nullptr || length <= 0)
@@ -94,6 +94,8 @@ int getDuplication(const int* numbers, int length)
         }
         else if (count == (middle - start + 1))
         {
+            // 原来的做法，不能保证重复数字不在 start ~ middle，但可以保证重复数字在 middle + 1 ~ end，这是可以根据题目证明出来的
+            
             // 原来的做法，直接将这种情况当成 重复数字在 middle + 1 ~ end， 有问题
 
             int check_middle = ((middle - start) >> 1) + start;
