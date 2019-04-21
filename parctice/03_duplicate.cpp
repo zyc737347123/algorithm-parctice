@@ -94,7 +94,7 @@ int getDuplication(const int* numbers, int length)
         }
         else if (count == (middle - start + 1))
         {
-            // 原来的做法，不能保证重复数字不在 start ~ middle，但可以保证重复数字在 middle + 1 ~ end，这是可以根据题目证明出来的
+            // 原来的做法，不能保证重复数字不在 start ~ middle，但可以保证重复数字在 middle + 1 ~ end，这是可以根据题目条件证明出来的
             
             // 原来的做法，直接将这种情况当成 重复数字在 middle + 1 ~ end， 有问题
 
