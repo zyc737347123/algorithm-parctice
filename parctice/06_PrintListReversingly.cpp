@@ -54,5 +54,7 @@ ListNode* ReversList(ListNode* pHead)
         pPre = pCur;
         pCur = pNext;
     }
-    
+
+    pHead->next = nullptr;
+    return pPre;
 }
