@@ -45,11 +45,14 @@ int Parttion(int data[], int start, int end)
             if(small != index)
             {
                 // 此时data[index]比data[end]小, samll 和 index 之间存在距离
-                // 此时data[small - 1]会是最右边一个比data[end]小的数子
+                // 此时data[small - 1]会是最右边一个比data[end]小的数字
                 // 此时data[small]，是最左边一个比data[end]大的数字
                 // 所以需要交换
+                // 总结分区函数两个下标：samll和index，samll保持指向最右边比data[end]小的数字就可以了
+                // 当发现data[index]比data[end]小，交换 data[small+1] 和当前 data[index]即可
                 Swap(&data[small], &data[index]);
                 printa(data, end);
+                // 进行交换后，现在的data[samll]还是最右边一个比data[end]小的数字
             }
         }
     }
