@@ -44,9 +44,10 @@ int Parttion(int data[], int start, int end)
             small++;
             if(small != index)
             {
-                // 在small和index之间有比data[end]大的数字
-                // small会停在最右边一个比data[end]小的数子
-                // 发生交换的时候，会交换small++，即最左边一个比data[end]大的数字
+                // 此时data[index]比data[end]小, samll 和 index 之间存在距离
+                // 此时data[small - 1]会是最右边一个比data[end]小的数子
+                // 此时data[small]，是最左边一个比data[end]大的数字
+                // 所以需要交换
                 Swap(&data[small], &data[index]);
                 printa(data, end);
             }
