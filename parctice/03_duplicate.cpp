@@ -40,6 +40,7 @@ bool duplicate(int numbers[], int length, int* duplication)
             numbers[tmp] = tmp;
         }
     }
+    return false;
 }
 
 
